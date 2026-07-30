@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;  
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg,#153677,#4e085f);
+    padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    margin: auto;
+    margin-top: 100px;
+    background-color: rgb(250, 251, 250);
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo-app h2{
+    display: flex;
+    align-items: center;
+}
+
+.todo-app h2 img{
+    width: 35px;
+    margin-left: 10px;
+}
+.search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.21);
+    border-radius: 30px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    position: relative;
+}
+input{
+    flex: 1;
+    outline: none;
+    border: none;
+    background: transparent;
+    padding: 10px; 
+    padding-left: 40px;
+}
+button{
+    padding: 15px 50px;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: rgba(255, 68, 0, 0.884);
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+ ul li{
+    list-style-type: none;
+    padding: 12px 8px 12px 45px;
+    position: relative;
+    font-size: 17px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+.checked::before{
+    background-image: url(checked.png);
+}
+
+ul li span{
+    position: absolute;
+    top: 12px;
+    right: 0px;
+    font-size: 17px;
+    padding: 2px 8px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background-color: #5555555a;
+    align-items: center;  
+}
+#message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    position: absolute;
+    bottom: -35px;
+    left: 100px;
+    background-color: rgba(255, 228, 196, 0.507);
+    padding: 5px 40px;
+    display: none;
+    border-radius: 15px;
+}
